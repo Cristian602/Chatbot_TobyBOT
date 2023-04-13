@@ -2,6 +2,8 @@
 // import { create, Whatsapp } from 'venom-bot';
 const venom = require('venom-bot');
 const dialogflow = require('./dialogflow');
+const uuid = require("uuid");
+const sessionIds = new Map();
 
 venom
   .create({
@@ -15,7 +17,9 @@ venom
 
 function start(client) {
   client.onMessage(async (message) => {
-    let payload = await dialogflow.sendToDialogFlow(message.body,"123123");
+    setSessionAndUser(message.from);
+    let session = sessionIds.get(message.from);
+    let payload = await dialogflow.sendToDialogFlow(message.body,session);
     let responses = payload.fulfillmentMessages;
     for (const response of responses) {
       await sendMessageToWhatsapp(client, message, response);
@@ -37,4 +41,14 @@ function sendMessageToWhatsapp(client, message, response) {
       reject(erro);
     });
   });
+}
+
+async function setSessionAndUser(senderId) {
+  try {
+    if (!sessionIds.has(senderId)) {
+      sessionIds.set(senderId, uuid.v1());
+    }
+  } catch (error) {
+    throw error;
+  }
 }
