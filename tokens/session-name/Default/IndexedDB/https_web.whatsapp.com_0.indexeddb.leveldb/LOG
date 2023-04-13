@@ -1,7 +1,0 @@
-2023/04/12-20:40:17.751 45c4 Reusing MANIFEST C:\Users\CRISR\Desktop\Chatbot_TobyBOT\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/04/12-20:40:17.751 45c4 Recovering log #7
-2023/04/12-20:40:17.758 45c4 Reusing old log C:\Users\CRISR\Desktop\Chatbot_TobyBOT\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000007.log 
-2023/04/12-20:40:58.776 5f80 Compacting 1@1 + 1@2 files
-2023/04/12-20:40:58.795 5f80 Generated table #10@1: 12197 keys, 475463 bytes
-2023/04/12-20:40:58.795 5f80 Compacted 1@1 + 1@2 files => 475463 bytes
-2023/04/12-20:40:58.796 5f80 compacted to: files[ 0 0 1 0 0 0 0 ]

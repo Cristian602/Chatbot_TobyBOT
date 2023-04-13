@@ -1,6 +1,0 @@
-2023/04/12-19:02:14.958 34fc Reusing MANIFEST C:\Users\CRISR\Desktop\Chatbot_TobyBOT\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/04/12-19:02:14.959 34fc Recovering log #4
-2023/04/12-19:02:15.003 34fc Reusing old log C:\Users\CRISR\Desktop\Chatbot_TobyBOT\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
-2023/04/12-19:03:50.346 94c Level-0 table #8: started
-2023/04/12-19:03:50.380 94c Level-0 table #8: 1062973 bytes OK
-2023/04/12-19:03:50.381 94c Delete type=0 #4
