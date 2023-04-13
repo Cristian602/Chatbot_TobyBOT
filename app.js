@@ -1,6 +1,7 @@
 // Supports ES6
 // import { create, Whatsapp } from 'venom-bot';
 const venom = require('venom-bot');
+const dialogflow = require('./dialogflow');
 
 venom
   .create({
@@ -13,14 +14,19 @@ venom
   });
 
 function start(client) {
-  client.onMessage((message) => {
-    client
-        .sendText(message.from, 'Hola soy TobyBot. Puedes preguntarme sobre el proceso de titulación de la Facultad de Economía.')
+  client.onMessage(async (message) => {
+    let payload = await dialogflow.sendToDialogFlow(message.body,"123123");
+    let responses = payload.fulfillmentMessages;
+    for (const response of responses) {
+      client
+        .sendText(message.from, response.text.text[0])
         .then((result) => {
           console.log('Result: ', result); //return object success
         })
         .catch((erro) => {
           console.error('Error when sending: ', erro); //return object error
         });
+    }
+    
   });
 }

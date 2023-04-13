@@ -65,5 +65,3 @@ async function sendToDialogFlow(msg, session, params) {
 module.exports = {
   sendToDialogFlow,
 };
-
-sendToDialogFlow("hola","123123");
