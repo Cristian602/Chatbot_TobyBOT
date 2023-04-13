@@ -18,15 +18,23 @@ function start(client) {
     let payload = await dialogflow.sendToDialogFlow(message.body,"123123");
     let responses = payload.fulfillmentMessages;
     for (const response of responses) {
-      client
-        .sendText(message.from, response.text.text[0])
-        .then((result) => {
-          console.log('Result: ', result); //return object success
-        })
-        .catch((erro) => {
-          console.error('Error when sending: ', erro); //return object error
-        });
+      await sendMessageToWhatsapp(client, message, response);
     }
     
+  });
+}
+
+function sendMessageToWhatsapp(client, message, response) {
+  return new Promise((resolve, reject) => {
+    client
+    .sendText(message.from, response.text.text[0])
+    .then((result) => {
+      console.log('Result: ', result); //return object success
+      resolve(result);
+    })
+    .catch((erro) => {
+      console.error('Error when sending: ', erro);
+      reject(erro);
+    });
   });
 }
