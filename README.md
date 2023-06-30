@@ -4,6 +4,8 @@ Prototipo de Chatbot desarrollado por Ricardo Maldonado y Cristian Méndez como 
 NOTA:
 Al momento de iniciar la apicación clonada desde el repositorio remoto puede que al ejecutar de error al no tener los respectivos módulos. Para esto en la terminal de comandos de PowerShell de la carpeta donde se encuentre el proyecto se ejecuta los siguientes comandos:
 
+    npm install
+
     npm i venom-bot
     
     npm i dialogflow
