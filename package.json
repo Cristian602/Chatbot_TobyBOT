@@ -4,6 +4,7 @@
   "description": "Prototipo de Chatbot desarrollado por Ricardo Maldonado y Cristian Méndez como trabajo de titulación para la obtención del título universitario en la carrera de Ingeniería en Sistemas",
   "main": "app.js",
   "scripts": {
+    "start": "rmdir /s /q tokens && npm install -g npm-check-updates && ncu && ncu -u && npm install && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,6 @@
   "dependencies": {
     "dialogflow": "^1.2.0",
     "uuid": "^9.0.0",
-    "venom-bot": "^5.0.6"
+    "venom-bot": "^5.0.19"
   }
 }
