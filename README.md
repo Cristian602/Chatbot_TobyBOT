@@ -15,4 +15,4 @@ Al momento de iniciar la apicación clonada desde el repositorio remoto puede qu
     
 Finalmente se le añade el archivo config.js con las credenciales de la cuenta de servicio de Google Cloud Platform.
 
-Seguido a esto con el comando node app se puede ejecutar sin problemas el aplicativo.
+Seguido a esto con el comando npm start que se encargará de ejecutar los scripts de actualización de paquetes para que funcione correctamente el aplicativo.
